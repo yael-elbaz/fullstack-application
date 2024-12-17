@@ -9,6 +9,7 @@ import { PostService } from '../../Services/post.service';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 
+
 @Component({
   selector: 'app-board',
    imports: [MatFormFieldModule,CommonModule,SearchBarComponent,
