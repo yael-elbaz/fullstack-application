@@ -1,0 +1,30 @@
+[
+    {
+        "Id": 1,
+        "Title": "Water Fight Taipei",
+        "Content": "Thank you for coming to the Water Fight event in Taipei!",
+        "Author": "Posted by Bob",
+        "Place": "New York",
+        "Category": "Events",
+        "Image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "Id": 2,
+        "Title": "Guzheng 古筝 For Sale",
+        "Content": "string",
+        "Author": "Posted by Alice",
+        "Place": "jerusalem",
+        "Category": "Buy & Sell",
+        "Image": "https://via.placeholder.com/300x200"
+    },
+    {
+        "Id": 2,
+        "Title": "Apartment Near Tel Aviv Market",
+        "Content": "2-bedroom apartment with amazing views.",
+        "Author": "Posted by Alice",
+        "Place": "jerusalem",
+        "Category": "Rent",
+        "Image": "https://via.placeholder.com/300x200"
+    }
+]
+

@@ -1,0 +1,16 @@
+<mat-card class="post-card">
+    <mat-card-header>
+      <!-- <div ngClass="categoryAndPlace"> -->
+      <mat-card-subtitle>{{ post.place }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ post.category }}</mat-card-subtitle>
+      <!-- </div> -->
+    <mat-card-title ngClass="title">{{ post.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image *ngIf="post.image" [src]="post.image" alt="{{ post.title }}" />
+    <mat-card-content>
+      <p>{{ post.content }}</p>
+    </mat-card-content>
+    <mat-card-footer>
+      <p><small>{{ post.author }}</small></p>
+    </mat-card-footer>
+  </mat-card>

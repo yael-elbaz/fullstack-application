@@ -1,0 +1,4 @@
+<app-search-bar (search)="filterPosts($event)"></app-search-bar>
+<div class="board">
+    <app-post-card *ngFor="let post of filteredPosts" [post]="post"></app-post-card>
+  </div>

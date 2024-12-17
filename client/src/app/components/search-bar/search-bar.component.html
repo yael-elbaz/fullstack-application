@@ -1,0 +1,11 @@
+<div class="search-bar">
+  <mat-form-field appearance="outline" class="search-input">
+    <input
+      [(ngModel)]="searchValue"
+      matInput
+      placeholder="Type address or a place nearby..."
+    />
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="onSearch()">Go</button>
+</div>
+
