@@ -3,7 +3,7 @@ name: Build and Deploy Fullstack App
 on:
   push:
     branches:
-      - main  # Trigger on pushes to main branch
+      - main
 
 jobs:
   build:
@@ -14,29 +14,23 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Set up Node.js for building the client
-      - name: Set Up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      # Install and build client project
-      - name: Build Client Project
+      # Build the Angular client
+      - name: Build Angular App
         run: |
           cd client
-          npm install
-          npm run build  # Adjust if using Angular or other frameworks
+          npm ci
+          npm run build -- --configuration production
 
-      # Set up backend service (e.g., Node.js)
-      - name: Set Up Service
+      # Publish the ASP.NET Core server
+      - name: Build and Publish Server
         run: |
-          cd service
-          npm install
-          # Add steps to start/test your backend server
+          cd server
+          dotnet restore
+          dotnet publish -c Release -o publish
 
-      # Deploy Client to GitHub Pages
-      - name: Deploy Client to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./client/dist  # Adjust the path for your build output
+      # Deploy both client and server
+      - name: Deploy Application
+        run: |
+          # Example: Deploy to Azure, AWS, or a self-hosted environment
+          # Replace with your deployment steps
+          echo "Deploying application..."
